@@ -1,4 +1,7 @@
-
+'''
+Author: Taylor Brazelton
+Updated: 1/2/2016
+'''
 class Singleton:
     # Intialization of the instance and store the passed in function.
     def __init__(self, classToSinglize):
@@ -24,17 +27,19 @@ class math(object):
     def __str__(self):
         return str(self.num)
 
-# Have our singleton class overwrite the default __init__ and __call__ func's.
-math = Singleton(math)
+# If not a module, then run this sequence of commands.
+if __name__ == "__main__":
+    # Have our singleton class overwrite the default __init__ and __call__ func's.
+    math = Singleton(math)
 
-# Setup different variables to the same class.
-x=math()
-y=math()
-z=math()
-x.add(2) # num = 2
-y.add(4) # num = 6
-z.sub(1) # num = 5
-print(x)
-print(y)
-print(z)
-print(x is y is z)
+    # Setup different variables to the same class.
+    x=math()
+    y=math()
+    z=math()
+    x.add(2) # num = 2
+    y.add(4) # num = 6
+    z.sub(1) # num = 5
+    print(x)
+    print(y)
+    print(z)
+    print(x is y is z)
