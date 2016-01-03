@@ -1,3 +1,3 @@
 # Design patterns:
 
-Singleton - ensure only one instance of this class is made available globally.
+Singleton - Ensure only one instance of this class is made available globally.
